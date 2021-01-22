@@ -9,7 +9,11 @@ pipeline {
       stage("build") {
       
           steps { 
-               echo " build phase.."
+               echo " build phase.."		  
+		  script {
+			def test = 1 + 1 == 2 ? "cool" : "not cool"
+			echo test
+		  }	  
           }	
       }	
 	   
